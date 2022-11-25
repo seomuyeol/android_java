@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private String str;
     private ImageView testImage;
     private Button btn_ListActivity;
+    private Button btn_NaviActivity;
 
 
     @Override
@@ -69,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_NaviActivity = (Button) findViewById(R.id.btn_NaviActivity);
+        btn_NaviActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NaviAcrivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
