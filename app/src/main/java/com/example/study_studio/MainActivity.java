@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_move;
     private String str;
     private ImageView testImage;
+    private Button btn_ListActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "readToast",Toast.LENGTH_LONG).show();
 
+            }
+        });
+
+        Button btn_ListActivity = (Button) findViewById(R.id.btn_ListActivity);
+        btn_ListActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
             }
         });
 
