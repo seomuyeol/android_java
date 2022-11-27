@@ -2,9 +2,13 @@ package com.example.study_studio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +16,7 @@ import java.util.List;
 public class ListActivity extends AppCompatActivity {
 
     private ListView list;
+    private ImageView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +37,14 @@ public class ListActivity extends AppCompatActivity {
         data.add("SeoAndro");
         data.add("SeoAndr");
         adapter.notifyDataSetChanged();
+
+        test = (ImageView) findViewById(R.id.test);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Toast테스트", Toast.LENGTH_SHORT).show();
+            }
+        });
+        
     }
 }
