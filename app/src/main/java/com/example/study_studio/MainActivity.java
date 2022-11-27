@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView testImage;
     private Button btn_ListActivity;
     private Button btn_NaviActivity;
+    private Button btn_WebViewActivity;
 
 
     @Override
@@ -75,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, NaviAcrivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_WebViewActivity = (Button) findViewById(R.id.btn_WebViewActivity);
+        btn_WebViewActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
         });
